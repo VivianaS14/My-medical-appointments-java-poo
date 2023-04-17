@@ -5,10 +5,11 @@ public class Doctor {
     String speciality;
 
     // Constructor
-    Doctor(String name) {
-        this.name = name;
-        // id  es static por lo que su scope es global, valor del dato prevalece mas halla de la instansacion
+    Doctor(String name, String speciality) {
+        // id  es static por lo que su scope es global, valor del dato prevalece mas halla de la instanciacion
         id++;
+        this.name = name;
+        this.speciality = speciality;
     }
 
     //Comportamientos
