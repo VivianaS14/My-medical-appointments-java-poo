@@ -1,4 +1,4 @@
-import javax.print.Doc;
+import static ui.UIMenu.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,5 +10,9 @@ public class Main {
         Doctor myDoctorMin = new Doctor("Minnie");
         myDoctorMin.showName();
         myDoctorMin.showId();
+
+        showMenu();
     }
+
+
 }
