@@ -6,7 +6,7 @@ public class Main {
         //showMenu();
 
         Doctor myDoctor = new Doctor("Min Suga", "General");
-        
+
     }
 
 
