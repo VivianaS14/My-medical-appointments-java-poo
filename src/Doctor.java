@@ -1,27 +1,23 @@
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Doctor {
+public class Doctor extends User {
     // Atributos de la clase Doctor
-    static int id = 0; // Autoincrement
-    private String name;
     private String speciality;
 
     // Constructor
-    Doctor(String name, String speciality) {
-        // id  es static por lo que su scope es global, valor del dato prevalece mas halla de la instanciacion
-        id++;
-        this.name = name;
-        this.speciality = speciality;
+    Doctor(String name, String email) {
+        super(name, email);
+
     }
 
     //Comportamientos
-    public void showName() {
-        System.out.println("Doctor: " + name);
+    public String getSpeciality() {
+        return speciality;
     }
 
-    public void showId() {
-        System.out.println("ID: " + id);
+    public void setSpeciality(String speciality) {
+        this.speciality = speciality;
     }
 
     ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
