@@ -15,6 +15,8 @@ public class Main {
         myDoctor.addAvailableAppointment(new Date(), "8pm");
 
         System.out.println(myDoctor);
+
+
         /*
         for (model.Doctor.AvailableAppointment aA : myDoctor.getAvailableAppointments()) {
             System.out.println(aA.getDate() + " " + aA.getTime());

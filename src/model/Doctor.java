@@ -26,6 +26,13 @@ public class Doctor extends User {
                 "\nAvailable: " + availableAppointments.toString();
     }
 
+    // implementacion del metodo abstracto
+    @Override
+    public void showDataUser() {
+        System.out.println("Hospital: Del Corazon");
+        System.out.println("Departamento: Cardiologia");
+    }
+
     ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
     public void addAvailableAppointment(Date date, String time) {
         availableAppointments.add(new Doctor.AvailableAppointment(date, time));
