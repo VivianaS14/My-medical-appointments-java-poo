@@ -1,5 +1,8 @@
 import model.Doctor;
+import model.ISchedulable;
 import model.Patient;
+import model.User;
+
 import java.util.Date;
 
 public class Main {
@@ -15,6 +18,21 @@ public class Main {
         myDoctor.addAvailableAppointment(new Date(), "8pm");
 
         System.out.println(myDoctor);
+        myDoctor.showDataUser();
+
+        //Clase anonima
+        User user1 = new User("Ana", "ana@ana.com") {
+            @Override
+            public void showDataUser() {
+                System.out.println("Doctor\n");
+                System.out.println("Hospital: Cruz Azul");
+                System.out.println("Departamento: Oncologia");
+            }
+        };
+
+        user1.showDataUser();
+
+        
 
 
         /*
@@ -30,6 +48,7 @@ public class Main {
         patient.setPhoneNumber("3057461180");
 
         System.out.println(patient);
+        patient.showDataUser();
 
         
 
