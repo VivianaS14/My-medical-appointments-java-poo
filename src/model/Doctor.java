@@ -1,14 +1,15 @@
+package model;
+
 import java.util.ArrayList;
 import java.util.Date;
 
 public class Doctor extends User {
-    // Atributos de la clase Doctor
+    // Atributos de la clase model.Doctor
     private String speciality;
 
     // Constructor
-    Doctor(String name, String email) {
+    public Doctor(String name, String email) {
         super(name, email);
-
     }
 
     //Comportamientos
