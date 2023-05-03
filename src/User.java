@@ -53,4 +53,11 @@ public class User {
             this.phoneNumber = phoneNumber;
         }
     }
+
+    // toString de la clase objeto
+    @Override
+    public String toString() {
+        return "User: " + name + ", Email: " + email+
+                "\nAddress: " + address + ", Phone: " + phoneNumber;
+    }
 }
