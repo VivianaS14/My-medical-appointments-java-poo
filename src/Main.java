@@ -2,24 +2,26 @@ import model.Doctor;
 import model.ISchedulable;
 import model.Patient;
 import model.User;
+import ui.UIMenu;
 
 import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
 
-        //showMenu();
+        UIMenu.showMenu();
 
-        Doctor myDoctor = new Doctor("Min Suga", "suga@mail.com");
-        myDoctor.setSpeciality("General");
-        myDoctor.setPhoneNumber("3014568952");
+        //Doctor myDoctor = new Doctor("Min Suga", "suga@mail.com");
+        //myDoctor.setSpeciality("General");
+        //myDoctor.setPhoneNumber("3014568952");
         //myDoctor.addAvailableAppointment(new Date(), "4pm");
         //myDoctor.addAvailableAppointment(new Date(), "10pm");
         //myDoctor.addAvailableAppointment(new Date(), "8pm");
 
-        System.out.println(myDoctor);
-        myDoctor.showDataUser();
+        //System.out.println(myDoctor);
+        //myDoctor.showDataUser();
 
+        /*
         //Clase anonima
         User user1 = new User("Ana", "ana@ana.com") {
             @Override
@@ -31,7 +33,7 @@ public class Main {
         };
 
         user1.showDataUser();
-
+        */
         
 
 
@@ -40,6 +42,7 @@ public class Main {
             System.out.println(aA.getDate() + " " + aA.getTime());
         }*/
 
+        /*
         System.out.println();
         System.out.println();
         System.out.println();
@@ -49,6 +52,7 @@ public class Main {
 
         System.out.println(patient);
         patient.showDataUser();
+        */
 
         
 
