@@ -13,9 +13,9 @@ public class Main {
         Doctor myDoctor = new Doctor("Min Suga", "suga@mail.com");
         myDoctor.setSpeciality("General");
         myDoctor.setPhoneNumber("3014568952");
-        myDoctor.addAvailableAppointment(new Date(), "4pm");
-        myDoctor.addAvailableAppointment(new Date(), "10pm");
-        myDoctor.addAvailableAppointment(new Date(), "8pm");
+        //myDoctor.addAvailableAppointment(new Date(), "4pm");
+        //myDoctor.addAvailableAppointment(new Date(), "10pm");
+        //myDoctor.addAvailableAppointment(new Date(), "8pm");
 
         System.out.println(myDoctor);
         myDoctor.showDataUser();

@@ -2,9 +2,11 @@ package ui;
 
 import model.Doctor;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UIDoctorMenu {
+    public static ArrayList<Doctor> doctorsAvailableAppointments = new ArrayList<>();
     public static void showDoctorMenu () {
         int response = 0;
         do {
@@ -20,7 +22,7 @@ public class UIDoctorMenu {
 
             switch (response) {
                 case 1:
-
+                    showAddAvailableAppointmentsMenu();
                     break;
                 case 2:
 
@@ -50,18 +52,39 @@ public class UIDoctorMenu {
               if (response > 0 && response < 4) {
                   // 1,2,3
                   int monthSelected = response;
-                  System.out.println(monthSelected + " . " + UIMenu.MONTHS[monthSelected]);
+                  System.out.println(monthSelected + " . " + UIMenu.MONTHS[monthSelected-1]);
 
                   System.out.println("Ingrese la fecha disponile: [dd/mm/yyyy]");
                   String date = sc.nextLine();
 
                   System.out.println("Tu fecha es: " + date + "\n1. Correcto \n2. Cambiar fecha");
-                  
+                  int responseDate = Integer.valueOf(sc.nextLine());
+                  // continue -> vuelve a iniciar
+                  if (responseDate == 2) continue;
+
+                  int responseTime = 0;
+                  String time = "";
+                  do {
+                      System.out.println("Ingresa la hora disponible para esta fecha: " + date + "[16:00]");
+                      time = sc.nextLine();
+                      System.out.println("La hora es: " + time + "\n1. Correcto \n2. Cambiar Hora");
+                      responseTime = Integer.valueOf(sc.nextLine());
+                  } while (responseTime == 2);
+
+                  UIMenu.doctorLogged.addAvailableAppointment(date, time);
+
+                  checkDoctorAvailableAppointments(UIMenu.doctorLogged);
 
               } else if (response == 0) {
                   showDoctorMenu();
               }
 
           } while (response != 0);
+    }
+
+    private static void checkDoctorAvailableAppointments (Doctor doctor) {
+        if (doctor.getAvailableAppointments().size() > 0 && !doctorsAvailableAppointments.contains(doctor)) {
+            doctorsAvailableAppointments.add(doctor);
+        }
     }
 }
