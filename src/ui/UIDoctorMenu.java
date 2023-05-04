@@ -25,7 +25,7 @@ public class UIDoctorMenu {
                     showAddAvailableAppointmentsMenu();
                     break;
                 case 2:
-
+                    showDoctorMyAppointments();
                     break;
                 case 0:
                     UIMenu.showMenu();
@@ -86,5 +86,22 @@ public class UIDoctorMenu {
         if (doctor.getAvailableAppointments().size() > 0 && !doctorsAvailableAppointments.contains(doctor)) {
             doctorsAvailableAppointments.add(doctor);
         }
+    }
+
+    private static void showDoctorMyAppointments () {
+        int response = 0;
+        do {
+            System.out.println("::My available appointments");
+            if (UIMenu.doctorLogged.getAvailableAppointments().size() == 0) {
+                System.out.println("Don't have appointments");
+                break;
+            }
+
+            for (int i = 0; i < UIMenu.doctorLogged.getAvailableAppointments().size(); i++) {
+                int j = i+1;
+                System.out.println(j + ". " + UIMenu.doctorLogged.getAvailableAppointments().get(i).getDate()
+                        + " \nTime: " + UIMenu.doctorLogged.getAvailableAppointments().get(i).getTime());
+            }
+        } while (response != 0);
     }
 }

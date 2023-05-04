@@ -35,7 +35,7 @@ public class Doctor extends User {
         System.out.println("Departamento: Cardiologia");
     }
 
-    ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
+    private ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
     public void addAvailableAppointment(String date, String time) {
         availableAppointments.add(new Doctor.AvailableAppointment(date, time));
     }
